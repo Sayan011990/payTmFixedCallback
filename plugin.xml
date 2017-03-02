@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.paytm-fixed.cordova"
+        id="com.paytm.cordova"
         version="0.0.1">
 
   <name>PayTM</name>
@@ -20,11 +20,6 @@
 
   <issue>https://github.com/isathyam/CordovaPayTM/issues</issue>
 
-  <preference name="GENERATE_URL" />
-  <preference name="VERIFY_URL" />
-  <preference name="MERCHANT_ID" />
-  <preference name="INDUSTRY_TYPE_ID" />
-  <preference name="WEBSITE" />
 
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
@@ -82,11 +77,11 @@
 
     <source-file src="src/android/res/values/paytmcordova.xml" target-dir="res/values" />
     <config-file target="res/values/paytmcordova.xml" parent="/*">
-        <string name="paytm_gen_url">$GENERATE_URL</string>
-        <string name="paytm_chk_url">$VERIFY_URL</string>
-        <string name="paytm_merchant_id">$MERCHANT_ID</string>
-        <string name="paytm_industry_type_id">$INDUSTRY_TYPE_ID</string>
-        <string name="paytm_website">$WEBSITE</string>
+        <string name="paytm_gen_url">http://headstart.digital-agency.co.in/paytm/generateChecksum.php</string>
+        <string name="paytm_chk_url">http://headstart.digital-agency.co.in/paytm/verifyChecksum.php</string>
+        <string name="paytm_merchant_id">DIY12386817555501617</string>
+        <string name="paytm_industry_type_id">Retail</string>
+        <string name="paytm_website">DIYtestingweb</string>
     </config-file>
     
     <config-file target="AndroidManifest.xml" parent="application">
@@ -99,3 +94,4 @@
     <source-file src="src/android/com/paytm/cordova/PayTM.java" target-dir="src/com/paytm/cordova"/>
   </platform>
 </plugin>
+
